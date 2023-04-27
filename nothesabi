@@ -1,0 +1,30 @@
+package patika_java101_odev1;
+
+import java.util.Scanner;
+
+public class notHesabı {
+	public static void main(String args []) {
+		int mat, tür, fiz, kim, müz;
+		double ort;
+		Scanner girdi = new Scanner(System.in);
+		System.out.println("Matematik notunuzu giriniz:");
+		mat = girdi.nextInt();
+		int mat1 = (mat > 100 && mat < 0) ? 0 : mat;
+		System.out.println("Türkçe notunuzu giriniz:");
+		tür = girdi.nextInt();
+		int tür1 = (tür > 100 && tür < 0) ? 0 : tür;
+		System.out.println("Fizik notunuzu giriniz:");
+		fiz = girdi.nextInt();
+		int fiz1 = (fiz > 100 && fiz < 0) ? 0 : fiz;
+		System.out.println("Kimya notunuzu giriniz:");
+		kim = girdi.nextInt();
+		int kim1 = (kim > 100 && kim < 0) ? 0 : kim;
+		System.out.println("Müzik notunuzu giriniz:");
+		müz = girdi.nextInt();
+		int müz1 = (müz > 100 && müz < 0) ? 0 : müz;
+		ort = (mat + tür + fiz+ kim + müz)/5;
+        if (ort >= 55 && ort <= 100)
+            System.out.println("Tebrikler...Sinifi Geçtiniz.");
+
+        else if (ort >= 0 && ort < 55)
+            System.out.println("Sinifta Kaldiniz....");
