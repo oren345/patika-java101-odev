@@ -1,0 +1,33 @@
+package patika_java101_odev1;
+import java.util.Scanner;
+
+public class sifresifirlama {
+	public static void main(String args[]) {
+		String kadi, sifre, cevap, yenisifre, sifrem = "java123";
+		Scanner girdi = new Scanner(System.in);
+		System.out.print("Kullanıcı Adınızı Giriniz : ");
+        kadi = girdi.nextLine();
+        System.out.print("Şifrenizi Giriniz : ");
+        sifre = girdi.nextLine();
+
+        if (kadi.equals("patika") && sifre.equals(sifrem)) {
+        	System.out.println("Giriş Başarılı!");
+        }
+        else {
+            System.out.println("Kullanıcı Adı veya Şifrenizi Yanlış Girdiniz");
+            System.out.println("Şifrenizi Sıfırlamak İster misiniz?");
+        }
+        cevap = girdi.nextLine();
+        if(cevap.equals("evet")) {
+            System.out.print("Yeni Şifrenizi Giriniz : ");
+            yenisifre = girdi.nextLine();
+        	if(yenisifre.equals(sifre) || (yenisifre.equals(sifrem))) {
+        		System.out.println("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
+        	}
+        	else {
+        		System.out.print("Şifre oluşturuldu");
+        	}
+        }
+        
+	}
+}
