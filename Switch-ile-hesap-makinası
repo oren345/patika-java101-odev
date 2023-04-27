@@ -1,0 +1,35 @@
+package patika_java101_odev1;
+
+import java.util.Scanner;
+
+public class hesapmakinasi {
+    public static void main(String[] args) {
+        int a, b;
+        short expression;
+        Scanner girdi = new Scanner(System.in);
+        System.out.print("İlk Sayıyı Giriniz : ");
+        a = girdi.nextInt();
+        System.out.print("İkinci Sayıyı Giriniz : ");
+        b = girdi.nextInt();
+        System.out.println("İşlem Seçiniz (1-Toplama,2-Çıkarma,3-Bölme,4-Çarpma) :");
+        expression = girdi.nextShort();
+    
+	    switch(expression) {
+	    case 1:
+		    System.out.println(a+b);
+		    break;
+	    case 2:
+		    System.out.println(a-b);
+		    break;
+	    case 3:
+		    System.out.println(a-b);
+		    break;
+	    case 4:
+		    System.out.println(a-b);
+		    break;
+	    default:
+		    System.out.println("İşlem yapmak istediğiniz sayıları giriniz");
+		    break;
+	    }
+    }
+}
